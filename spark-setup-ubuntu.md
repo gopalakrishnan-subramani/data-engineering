@@ -90,3 +90,17 @@ alias python3=python3.7
 ```
 sudo ln -s /usr/bin/python3.7 /usr/bin/python
 ```
+
+start pyspark
+
+```
+pyspark
+```
+
+
+
+to start spark-shell, scala
+
+```
+spark-shell
+```
