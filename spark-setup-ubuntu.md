@@ -56,3 +56,10 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 
 **note** Spark directory include a Yarn, this will conflict with Hadoop yarn. To run Yarn command, use $YARN_HOME/bin/yarn instead of plain yarn command
+
+
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.7
+```
