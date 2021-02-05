@@ -51,7 +51,7 @@ Paste below content
 
 ```
 export SPARK_HOME=/opt/spark-2.4.7-bin-hadoop2.7
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 ```
 
 
