@@ -68,3 +68,20 @@ sudo apt-get install python3.7
 python3.7
 ```
 
+
+
+```
+cd ~
+
+nano .bashrc
+
+```
+
+paste below
+
+
+```
+alias python=python3.7
+alias python3=python3.7
+```
+
