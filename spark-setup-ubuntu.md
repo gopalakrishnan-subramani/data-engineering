@@ -85,3 +85,8 @@ alias python=python3.7
 alias python3=python3.7
 ```
 
+# For Spark to run pyspark
+
+```
+sudo ln -s /usr/bin/python3.7 /usr/bin/python
+```
