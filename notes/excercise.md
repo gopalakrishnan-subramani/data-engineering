@@ -81,6 +81,26 @@ filter and read all cities of specific state
 sort function
 try group by functions
 
+------
+
+Download this file into local disk
+https://raw.githubusercontent.com/midwire/free_zipcode_data/develop/all_us_zipcodes.csv
+
+once downloaded..
+
+1. create a directory in hadoop called "/data"
+2. upload all_us_zipcodes.csv from local to hadoop /data directory
+3. cat /data/all_us_zipcodes.csv file from hadoop to display the content...
+
+pyspark and read from hadoop
+pyspark and write to hadoop
+pyspark and write to folder
+
+---
+
+spark-submit
+
+
 
 
 
