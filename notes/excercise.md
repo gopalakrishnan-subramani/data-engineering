@@ -30,3 +30,57 @@ the expected output should be
 
 (John, (Male, 4000))
 (Mary, (Female, 6000))
+
+
+---
+
+
+Download the csv
+
+https://raw.githubusercontent.com/midwire/free_zipcode_data/develop/all_us_zipcodes.csv
+
+Load the textFile
+Skip the first line
+
+create tuple
+
+sorted
+groupByKey
+GroupKy
+
+
+
+all_zip_codes = sc.textFile("/home/ubuntu/learning/all_us_zipcodes.csv")
+
+
+all_zip_codes = sc.textFile("/home/ubuntu/learning/all_us_zipcodes.csv")
+ r2 = all_zip_codes.filter (lambda line: False if ("code" in line) else True)
+
+
+r3 = r2.map (lambda line: line.split(","))
+r3.take(2)
+r4 = r3.map (lambda arr: (arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6]))
+
+r4.take(2)
+
+r4.takeOrdered(10, key = lambda row: row[2])
+  
+sorted = r4.sortBy(lambda row: row[2])
+
+r5 = r4.map(lambda row: (row[2], row[:2] + row[3:]))
+
+r6.groupByKey().mapValues(lambda rr: len(rr)).collect()
+
+r6.groupByKey().values().map(lambda c: len(c)).collect()
+
+
+
+RDD 
+
+filter and read all cities of specific state
+sort function
+try group by functions
+
+
+
+
