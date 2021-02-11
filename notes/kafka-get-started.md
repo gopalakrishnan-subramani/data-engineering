@@ -98,3 +98,25 @@ from a specific partition, read msg from speicific offset
 kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 0   --offset 3
 kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 1   --offset 1
 ```
+
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs  --group myconsumer-group1
+
+produce some message and check in consumer
+
+stop the consumer
+
+produce more messages
+
+and run the consumer with group id
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs  --group myconsumer-group1
+
+
+validate the consumer is not re-processing same message again and again
+
+```
+
+
+
