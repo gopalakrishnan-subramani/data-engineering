@@ -14,3 +14,20 @@ kafka-topics --list --zookeeper localhost:2181
 kafka-topics --describe --zookeeper localhost:2181 --topic test
 
 ```
+
+
+Open a new terminal
+
+```
+kafka-console-producer --broker-list localhost:9092 --topic test
+```
+
+
+open new terminal 
+
+listen for the messages published/latest
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test
+```
+
