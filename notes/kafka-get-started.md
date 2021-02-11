@@ -84,6 +84,8 @@ note down the output directry name, where kafka store the configuration
 ```
 kafka-console-producer --broker-list localhost:9092 --topic logs
 
+Since no consumer group mentioned, below command, shall always get the data which produced now onwards, ie latest
+
 kafka-console-consumer --bootstrap-server localhost:9092 --topic logs
 kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --from-beginning
 
