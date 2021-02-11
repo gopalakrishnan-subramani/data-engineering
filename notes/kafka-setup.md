@@ -15,9 +15,10 @@ sudo nano /etc/environment
 
 paste below
 
+```
 KAFKA_HOME=/opt/confluent-5.5.1
 CONFLUENT_HOME=/confluent-5.5.1
-
+```
 
 ----
 
@@ -29,8 +30,9 @@ nano .bashrc
 
 paste below at end of the file
 
+```
 export KAFKA_HOME=/opt/confluent-5.5.1
 export CONFLUENT_HOME=/confluent-5.5.1
 
 export $PATH=$PATH:KAFKA_HOME/bin
-
+```
