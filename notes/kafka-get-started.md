@@ -41,5 +41,24 @@ start consumer  with --from-beginging
 kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
 
+### Excercise [5 mins]
+
+create a topic called messsages with partition 1 and replication factor 1
+
+run the producer in terminal and produce messsage to messsages topic
+
+run the consumer and susbcribe from messages topics
+
+and check when consumer offline, you could produce message
+
+and try reading using from-begining
+
+
+
+
+
+
+
+
 
 
