@@ -31,3 +31,15 @@ listen for the messages published/latest
 kafka-console-consumer --bootstrap-server localhost:9092 --topic test
 ```
 
+Ctrl + C to stop it
+
+Produce messages when consumer down...
+
+start consumer  with --from-beginging
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+```
+
+
+
