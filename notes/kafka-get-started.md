@@ -78,6 +78,19 @@ kafka-topics --describe --zookeeper localhost:2181 --topic logs
 
 note down the output directry name, where kafka store the configuration
 
+```
+ cd into directory shown fo local current command
+ 
+ cd kafka
+ cd data
+ 
+ ls 
+ 
+ we can see <<topic>>-<<partition> folders 
+
+```
+
+
 
 3 partitions, no key, partition is allocated, messages are stored in robin robin basic since no key avaialble.
 
