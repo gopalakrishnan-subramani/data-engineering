@@ -71,4 +71,9 @@ kafka-topics --describe --zookeeper localhost:2181 --topic logs
 ```
 
 
+```
+ confluent local current 
 
+```
+
+note down the output directry name, where kafka store the configuration
