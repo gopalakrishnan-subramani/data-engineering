@@ -61,7 +61,14 @@ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partit
 kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions  3 --topic logs
 ```
 
+```
+kafka-topics --describe --zookeeper localhost:2181 --topic test
 
+kafka-topics --describe --zookeeper localhost:2181 --topic greetings
+
+kafka-topics --describe --zookeeper localhost:2181 --topic logs
+
+```
 
 
 
