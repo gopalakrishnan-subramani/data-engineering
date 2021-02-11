@@ -77,3 +77,22 @@ kafka-topics --describe --zookeeper localhost:2181 --topic logs
 ```
 
 note down the output directry name, where kafka store the configuration
+
+
+3 partitions, no key, partition is allocated, messages are stored in robin robin basic since no key avaialble.
+
+```
+kafka-console-producer --broker-list localhost:9092 --topic logs
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --from-beginning
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 0  --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 1  --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 2  --from-beginning
+
+from a specific partition, read msg from speicific offset
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 0   --offset 3
+kafka-console-consumer --bootstrap-server localhost:9092 --topic logs --partition 1   --offset 1
+```
