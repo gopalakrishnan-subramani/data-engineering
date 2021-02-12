@@ -30,10 +30,10 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 // Debug
 to know the partition where the messages are stored
 ```
-kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 0  --from-beginning
-kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 1  --from-beginning
-kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 2  --from-beginning
-kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 3  --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 0  --from-beginning --property print.key=true
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 1  --from-beginning --property print.key=true
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 2  --from-beginning --property print.key=true
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --partition 3  --from-beginning --property print.key=true
 
 ```
 
