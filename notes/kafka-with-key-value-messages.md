@@ -86,6 +86,29 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 ```
 
 
+## Part 3
+
+open new terminal, run the consumer again, this add 2 consumer instance to the group greetings-consumer-group
+
+
+consumer id: consumer-greetings-consumer-group-1-0fd73a2b-42ef-4f4e-86a1-b9d1a85571be
+
+Kafka revoke all the partitiosn from C1 and C2
+
+rebalance partitions to C1 and C2, C3
+
+3 Consumer and 4 Partitions
+
+C1:  [ P3]
+C2:  [ P2]
+C2:  [P0, P1 ]
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
+```
+
+
+
 
 
 // Debug
