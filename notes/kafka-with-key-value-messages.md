@@ -16,6 +16,25 @@ kafka-console-producer --broker-list localhost:9092 --topic greetings --property
 >key:value
 >NY:Happy New Year (Key is NY, seperator :), value part
 
+example 
+
+```
+>IN:msg1
+>USA:msg2
+>CA:msg3
+>UA:msg4
+>DE:msg5
+>FR:msg5
+>USA:msg6
+>AU:msg7
+>SL:msg8
+>CH:msg9
+>TH:msg10
+>SL:msg11
+>TH:msg12
+>
+```
+
 ## Part 1
 
 1 Consumer and 4 Partitions
