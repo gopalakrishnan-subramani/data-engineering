@@ -58,8 +58,9 @@ example
 every consumer shall have instance id, unique, prefixed with group name..
 
 onsumer-greetings-consumer-group-1-9d6b969a-2def-426a-bbb7-fc6d24670b40
-
+```
 C1: [P0, P1, P2, P3] 
+```
 
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
@@ -77,9 +78,10 @@ Kafka revoke all the partitiosn from C1 and
 rebalance partitions to C1 and C2
 
 2 Consumer and 4 Partitions
-
+```
 C1:  [2, 3]
 C2:  [0, 1]
+```
 
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
@@ -98,10 +100,11 @@ Kafka revoke all the partitiosn from C1 and C2
 rebalance partitions to C1 and C2, C3
 
 3 Consumer and 4 Partitions
-
+```
 C1:  [ P3]
 C2:  [ P2]
-C2:  [P0, P1 ]
+C3:  [P0, P1 ]
+```
 
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
