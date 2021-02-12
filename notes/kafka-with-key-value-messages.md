@@ -46,7 +46,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 ```
 
 
-## Part 1
+## Part 2
 
 open new terminal, run the consumer again, this add 2 consumer instance to the group greetings-consumer-group
 
