@@ -46,6 +46,25 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 ```
 
 
+## Part 1
+
+open new terminal, run the consumer again, this add 2 consumer instance to the group greetings-consumer-group
+
+Kafka revoke all the partitiosn from C1 and 
+rebalance partitions to C1 and C2
+
+2 Consumer and 4 Partitions
+
+C1:  []
+C2:  []
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
+```
+
+
+
+
 // Debug
 to know the partition where the messages are stored
 ```
