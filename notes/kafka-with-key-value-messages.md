@@ -55,6 +55,10 @@ example
 
 1 Consumer and 4 Partitions
 
+every consumer shall have instance id, unique, prefixed with group name..
+
+onsumer-greetings-consumer-group-1-9d6b969a-2def-426a-bbb7-fc6d24670b40
+
 C1: [P0, P1, P2, P3] 
 
 ```
@@ -66,13 +70,16 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 
 open new terminal, run the consumer again, this add 2 consumer instance to the group greetings-consumer-group
 
+
+consumer id: consumer-greetings-consumer-group-1-6fc2df59-cb9a-41b6-9244-ce2f5474828a
+
 Kafka revoke all the partitiosn from C1 and 
 rebalance partitions to C1 and C2
 
 2 Consumer and 4 Partitions
 
-C1:  []
-C2:  []
+C1:  [2, 3]
+C2:  [0, 1]
 
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
