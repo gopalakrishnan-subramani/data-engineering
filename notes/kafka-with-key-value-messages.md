@@ -9,6 +9,22 @@ kafka-topics --describe --zookeeper localhost:2181 --topic greetings
 ```
 
 
+To know which partitions assigned to consumer instance?
+
+```
+kafka-consumer-groups --bootstrap-server localhost:9092 --list
+
+kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group greetings-consumer-group
+
+with active members if any
+
+kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group greetings-consumer-group --members
+```
+
+
+
+
+
 ```	
 kafka-console-producer --broker-list localhost:9092 --topic greetings --property "parse.key=true" --property "key.separator=:"
 ```
