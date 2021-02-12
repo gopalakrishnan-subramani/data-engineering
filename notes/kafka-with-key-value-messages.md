@@ -111,7 +111,45 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --gro
 ```
 
 
+## Part 4
 
+open new terminal, run the consumer again, this add 2 consumer instance to the group greetings-consumer-group
+
+
+consumer id:  consumer-greetings-consumer-group-1-fb2445ae-08a3-4001-9c98-feee2d59f34b
+
+
+Kafka revoke all the partitiosn from C1 and C2, C3
+
+rebalance partitions to C1 and C2, C3, C4
+
+3 Consumer and 4 Partitions
+```
+C1:  [ 2]
+C2:  [ 1]
+C3:  [ 0]
+C4:  [3]
+```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
+```
+
+-------
+
+## Part 5
+
+Run 5th consumer on the same group, but we have only 4 partitions.
+
+One consumer out of 5, shall be IDLED, MAY NOT BE THIS ONE
+
+kafka revoke all the partitions again...
+
+re-assign partitions to 4 of 5 consumers instances
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic greetings --group greetings-consumer-group --property print.key=true
+```
 
 
 // Debug
