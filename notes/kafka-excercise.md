@@ -15,3 +15,10 @@ Scala Code
 
 1. Write a Scala producer for order topic
 2. Write a scala consumer for order topic
+
+
+Copy/clone SimpleProducer.scala as OrderProducer.scala, change the topic, change the key to include Order1, Order2, Order3, value also i * 100, 100, 200, 300, 400
+
+ In scala to convert int to string, 10.toString()
+ 
+ Copy/clone the SimpleConsumer.scala as OrderConsumer.scala, then change the topic, susbcribe for message, print...
