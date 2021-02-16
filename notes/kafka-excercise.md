@@ -22,3 +22,4 @@ Copy/clone SimpleProducer.scala as OrderProducer.scala, change the topic, change
  In scala to convert int to string, 10.toString()
  
  Copy/clone the SimpleConsumer.scala as OrderConsumer.scala, then change the topic, susbcribe for message, print...
+      set the group.id property to "scala-order-consumer"
