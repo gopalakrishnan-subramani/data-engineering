@@ -81,6 +81,13 @@ lines is a data frame
 lines.printSchema()
 ```
 
+import explode and split
+
+```python
+from pyspark.sql.functions import *
+```
+
+
 value is a column in the lines schema..
 
 ```python
