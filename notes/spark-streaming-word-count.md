@@ -36,7 +36,7 @@ lines = spark \
 ```
 
 ```python
-echoLinesQuery = wordCounts \
+echoLinesQuery = lines \
     .writeStream \
     .outputMode("append") \
     .format("console") \
