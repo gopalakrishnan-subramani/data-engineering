@@ -13,7 +13,7 @@ Kafka console consumer
 ```
 kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic work-count-output
 
-kafka-console-consumer --bootstrap-server localhost:9092 --topic work-count-output
+kafka-console-consumer --bootstrap-server localhost:9092 --topic work-count-output --property print.key=true --from-beginning
 ```
 
 -----
@@ -45,15 +45,17 @@ words = lines.select(
 )
 
 # Generate running word count
-wordCounts = words.groupBy("word").count()
+wordCounts = words.groupBy("word").count().withColumnRenamed("word", "key").withColumnRenamed("count", "value").selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
 ```
 
 ```
 wordCounts \
     .writeStream \
     .format("kafka") \
+    .outputMode("complete") \
     .option("kafka.bootstrap.servers", "localhost:9092") \
     .option("topic", "work-count-output") \
+    .option("checkpointLocation", "/home/ubuntu") \
     .start()
 ```
 
