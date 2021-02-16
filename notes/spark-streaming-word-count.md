@@ -15,5 +15,7 @@ now type lines and enter key
 check in second terminal, it should appear.
 
 
+follow python/scala sample given in official link
 
+https://spark.apache.org/docs/2.4.0/structured-streaming-programming-guide.html
 
