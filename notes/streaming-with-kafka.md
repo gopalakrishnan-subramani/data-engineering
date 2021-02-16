@@ -64,6 +64,9 @@ dfDeserialized = df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
 dfDeserialized.writeStream.outputMode("append").format("console").start()
 ```
 
+Shall print string key and string value
+
+Now go to Intellj, Run the OrderProducer.scala
 
 
 
