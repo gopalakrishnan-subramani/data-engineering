@@ -47,3 +47,63 @@ echoLinesQuery = lines \
 echoLinesQuery.awaitTermination()
 ```
 
+
+```
+exit()
+```
+
+Now in nc -lk 9999 terminal, type lines and see spark echo them on the console...
+
+----
+
+
+# Word count
+
+in terminal
+
+```
+pyspark
+```
+
+
+```python
+lines = spark \
+    .readStream \
+    .format("socket") \
+    .option("host", "localhost") \
+    .option("port", 9999) \
+    .load()
+```
+
+lines is a data frame
+
+```python
+lines.printSchema()
+```
+
+value is a column in the lines schema..
+
+```python
+# Split the lines into words
+words = lines.select(
+   explode(
+       split(lines.value, " ")
+   ).alias("word")
+)
+
+# Generate running word count
+wordCounts = words.groupBy("word").count()
+```
+
+```python
+query = wordCounts \
+    .writeStream \
+    .outputMode("complete") \
+    .format("console") \
+    .start()
+```
+
+```python
+query.awaitTermination()
+
+```
