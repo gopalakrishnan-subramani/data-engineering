@@ -19,3 +19,31 @@ follow python/scala sample given in official link
 
 https://spark.apache.org/docs/2.4.0/structured-streaming-programming-guide.html
 
+
+
+```
+pyspark
+```
+
+
+```python
+lines = spark \
+    .readStream \
+    .format("socket") \
+    .option("host", "localhost") \
+    .option("port", 9999) \
+    .load()
+```
+
+```python
+echoLinesQuery = wordCounts \
+    .writeStream \
+    .outputMode("append") \
+    .format("console") \
+    .start()
+```
+
+```
+echoLinesQuery.awaitTermination()
+```
+
