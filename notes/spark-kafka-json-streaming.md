@@ -97,6 +97,13 @@ query.stop()
 
 
 
+```
+qtyGT5 = jsonDf.filter(" quantity > 5 ")
+
+numberOfSalesDf = jsonDf.groupBy("stock_code").count()
+query = numberOfSalesDf.writeStream.outputMode("complete").format("console").start()
+
+```
 
 Shall print string key and string value
 
