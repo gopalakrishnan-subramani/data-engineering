@@ -58,10 +58,25 @@ Key is deserialized using CAST, value also deserialized using CAST operation to 
 ```
 dfDeserialized = df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
 ```
+```
+from pyspark.sql.functions import from_json, col
+from pyspark.sql.types import StructField, StructType, IntegerType, StringType, DoubleType
 
+schema = StructType(
+        [
+                StructField("invoice_no", StringType()),
+                StructField("stock_code", StringType()),
+                StructField("quantity", IntegerType()),
+                StructField("amount", DoubleType()),
+        ]
+)
+
+jsonDf = dfDeserialized.withColumn("value", from_json("value", schema))\
+    .select(col('value.*'))
+```
 
 ```
-dfDeserialized.writeStream.outputMode("append").format("console").start()
+jsonDf.writeStream.outputMode("append").format("console").start()
 ```
 
 Shall print string key and string value
