@@ -156,3 +156,11 @@ replicas: [brokerid1, brokerid2..]
 isr - in-sync-replicas [broker id, broker2..]
 offline: [broker id1, broker2]
 ````
+
+
+kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic logs
+kafka-topics --zookeeper localhost:2181 --alter --topic logs --partitions 3
+
+### for replica settings partition reassignment-- explain in later session
+
+kafka-topics --describe --zookeeper localhost:2181 --topic logs
