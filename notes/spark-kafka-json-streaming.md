@@ -67,7 +67,7 @@ schema = StructType(
                 StructField("invoice_no", StringType()),
                 StructField("stock_code", StringType()),
                 StructField("quantity", IntegerType()),
-                StructField("amount", DoubleType()),
+                StructField("price", DoubleType()),
         ]
 )
 
@@ -81,6 +81,6 @@ jsonDf.writeStream.outputMode("append").format("console").start()
 
 Shall print string key and string value
 
-Now go to Intellj, Run the OrderProducer.scala
+Now go to Intellj, Run the InvoiceProducer.scala
 
 
