@@ -76,8 +76,27 @@ jsonDf = dfDeserialized.withColumn("value", from_json("value", schema))\
 ```
 
 ```
-jsonDf.writeStream.outputMode("append").format("console").start()
+query = jsonDf.writeStream.outputMode("append").format("console").start()
 ```
+
+
+if we don't want to see the spark stream output shown, we can call
+
+```
+query.stop()
+```
+
+or by using a timer..hard coded sleep
+
+```
+import time
+time.sleep(30) # seconds
+query.stop()
+```
+
+
+
+
 
 Shall print string key and string value
 
