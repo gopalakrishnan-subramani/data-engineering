@@ -1,5 +1,7 @@
 package examples
 
+import scala.util.Random
+
 object InvoiceProducer extends  App {
   // comments
   import java.util.Properties // producer settings
@@ -21,9 +23,15 @@ object InvoiceProducer extends  App {
 
   val TOPIC = "invoices";
 
+  val random: Random = new Random()
+
+  val stock_codes = List("laptop", "mobile", "tablet", "monitor")
+
   for (i <- 1 to 1000) {
     val key = "Order" + i // Order1, Order2...
-    val invoice = Invoice(key, "laptop1", 1, 400) // value
+    val stock_code = stock_codes(random.nextInt(stock_codes.size))
+    val qty = 1 + random.nextInt(20) // max 20, min 1
+    val invoice = Invoice(key, stock_code, qty, 400) // value
      val record = new ProducerRecord(TOPIC, key, invoice)
     println("Writing " + key + ":" + invoice)
     // this will call serialize to serialize invoice into json bytes
