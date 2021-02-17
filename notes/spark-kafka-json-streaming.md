@@ -13,7 +13,7 @@ pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0
 ```
 df = spark.readStream.format("kafka")\
   .option("kafka.bootstrap.servers", "localhost:9092")\
-  .option("subscribe", "test")\
+  .option("subscribe", "invoices")\
   .load()
  
 ```
@@ -48,7 +48,7 @@ pyspark --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0
 ```
 df = spark.readStream.format("kafka")\
   .option("kafka.bootstrap.servers", "localhost:9092")\
-  .option("subscribe", "test")\
+  .option("subscribe", "invoices")\
   .load()
  
 ```
