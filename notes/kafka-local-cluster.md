@@ -108,3 +108,25 @@ ls /brokers/topics
 
 
 ```
+
+
+open new terminal
+
+#### Replication factor
+
+**does not help on scaling/performance**, help on fault tolerance, if one broker fails, other copies is readily availble.
+
+test replication factors, 
+
+replication factor should less than or equal to  number of brokers
+
+10 brokers,  3 or 5 replications
+20 brokers, 3 or 5 replications
+
+
+```
+kafka-topics --create --zookeeper localhost:2181 --replication-factor 3 --partitions 4 --topic greetings
+
+kafka-topics --describe --zookeeper localhost:2181 --topic greetings
+```
+
