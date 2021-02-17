@@ -130,3 +130,29 @@ kafka-topics --create --zookeeper localhost:2181 --replication-factor 3 --partit
 kafka-topics --describe --zookeeper localhost:2181 --topic greetings
 ```
 
+
+Notes
+
+For every partition, there shall be 1 leader will be there. Leader is a broker. 
+
+1. Leader is responsible to accept kafka messsages from producer, write to its log file, 
+2. Leader also responsible to server the consumers
+3. Leader also responsible to sync the data to replicas
+
+
+replicas - basically the brokers which replicate the parition data, replicas not participating with producer or with consumer. Used for replicas
+
+ISR - In-sync-Replica - the list of brokers who has exact copy of leader data already synced
+       if any broker fails between, the leader for the parition is choosen from In sync replicas, there shall be election co-orderinated by zookeeper to elect new leader for the parition, sub set of replicas
+       
+Offline: list of brokers which are offline [subset of replicas]
+       
+
+
+
+```
+leader: brokerId
+replicas: [brokerid1, brokerid2..]
+isr - in-sync-replicas [broker id, broker2..]
+offline: [broker id1, broker2]
+````
