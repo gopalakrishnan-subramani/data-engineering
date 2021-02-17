@@ -82,3 +82,29 @@ Broker 3 setting
 ```
 $KAFKA_HOME/bin/kafka-server-start $KAFKA_HOME/etc/kafka/server.properties --override broker.id=3  --override listeners=PLAINTEXT://:9095 --override log.dirs=/tmp/kafka-logs-3 --override confluent.metadata.server.listeners=http://0.0.0.0:8093 --override confluent.metadata.server.advertised.listeners=http://127.0.0.1:8093
 ```
+
+
+
+open new terminal
+
+zookeeper-shell, cli for zookeeper for debugging purpose..
+
+```
+zookeeper-shell localhost:2181
+```
+
+once it is connected, you can below commands
+
+```
+
+ls /
+
+ls /brokers
+
+ls /brokers/ids
+
+ls /brokers/topics
+
+
+
+```
