@@ -26,7 +26,7 @@ in your redshift,
 - create an external table called ratings with columns (id, rating, user_id), refers to moviedb schema [indirectly into moviedb catalog]
     with s3 path, s://..../ratings
 
-- upload the ratings.csv into s4 bucket
+- upload the ratings.csv into s3 bucket
 
  
 ```
