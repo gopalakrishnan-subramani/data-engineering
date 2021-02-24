@@ -1,11 +1,16 @@
+```
 movies.csv
 1,Good Bad Ugly,1999
+```
+
+```
 rating.csv [id, rating, user_id ]
 1,5
 1,4
 1,3
-
+```
 -----------
+
 In data lake formation
 
 - create a db called moviedb 
@@ -31,5 +36,8 @@ select * from moviedb.ratings
 
 create a redshift schema [not external], called "account"
     within account schema, create table called "users" with (id int, gender text)
+
+    insert data into account.users ()..
+
 
 join between them.
