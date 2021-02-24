@@ -5,9 +5,9 @@ movies.csv
 
 ```
 rating.csv [id, rating, user_id ]
-1,5
-1,4
-1,3
+1,5,100
+1,4,200
+1,3,300
 ```
 -----------
 
