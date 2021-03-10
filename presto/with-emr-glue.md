@@ -51,3 +51,24 @@ select * from mydb.users;
 
 
  ````
+ 
+ 
+ ```
+sudo pip3 install 'pyhive[presto]'
+sudo pip3 install thrift
+```
+
+```
+python
+```
+
+```
+
+from pyhive import presto
+cursor = presto.connect(host='localhost', port=8889).cursor()
+
+cursor.execute('select * from orderdb.invoices')
+print (cursor.fetchone())
+print (cursor.fetchall())
+
+```
