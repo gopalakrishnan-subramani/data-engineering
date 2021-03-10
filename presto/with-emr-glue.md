@@ -21,3 +21,33 @@ show tables;
 
 select * from invoices;
 ```
+
+
+
+---
+
+```
+ presto-cli --catalog hive
+ 
+ show schemas;
+ 
+ create schema mydb;
+ 
+ -- go to glue, check a database called mydb created
+ 
+ -- Edit database
+ 
+ -- set a s3 location   's3://gk-....../mydb/';
+ 
+ -- save the database.
+ 
+create table mydb.users(gender varchar(20), name varchar(100));
+
+insert into mydb.users(gender,name) values('m', 'joe');
+
+insert into mydb.users(gender,name) values('f', 'Mary');
+
+select * from mydb.users;
+
+
+ ````
