@@ -53,6 +53,25 @@ cursor.execute(' select * from hive.test.products')
 print (cursor.fetchone())
 print (cursor.fetchall())
 ```
+---
 
+
+```
+hive
+```
+
+```
+ show databases;
+ 
+ 
+  use test;
+  
+  
+  show tables;
+  
+  select * from products;
+ 
+ 
+```
 
 
