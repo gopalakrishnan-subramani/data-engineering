@@ -17,3 +17,26 @@ print (cursor.fetchone())
 print (cursor.fetchall())
 
 ```
+
+---
+
+exit from python
+
+in the emc ssh,
+
+```
+ presto-cli
+```
+
+```
+CREATE SCHEMA hive.test;
+
+ create table hive.test.products(id int, name varchar(50));
+ 
+ insert into  hive.test.products(id,name) values(1, 'Apple');
+ 
+ select * from hive.test.products;
+```
+
+close the cli.
+
