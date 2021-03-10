@@ -15,7 +15,7 @@ show schemas;
 select * from orderdb.invoices;
 
 -- optional 
-use schema orderdb;
+use  orderdb;
 
 show tables;
 
