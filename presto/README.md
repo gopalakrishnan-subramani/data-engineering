@@ -45,11 +45,14 @@ close the cli.
 python
 ```
 
+```
 from pyhive import presto
 cursor = presto.connect(host='localhost', port=8889).cursor()
 
 cursor.execute(' select * from hive.test.products')
 print (cursor.fetchone())
 print (cursor.fetchall())
+```
+
 
 
