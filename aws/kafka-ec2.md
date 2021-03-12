@@ -13,3 +13,16 @@ tar -xzf kafka_2.11-2.3.0.tgz
 
 cd kafka_2.11-2.3.0
 
+
+you are running this command on 'ubuntu@ip-172-31-39-83:~/kafka_2.11-2.3.0$'
+```
+
+
+bin/kafka-topics.sh --create --zookeeper  hostname:2181 --replication-factor 1 --partitions 4 --topic greetings
+
+ 
+bin/kafka-topics.sh --describe --zookeeper hostname:2181 --topic greetings
+
+
+
+```
