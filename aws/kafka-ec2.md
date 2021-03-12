@@ -26,3 +26,15 @@ bin/kafka-topics.sh --describe --zookeeper hostname:2181 --topic greetings
 
 
 ```
+
+```
+
+
+run this command on one ssh, on directory ubuntu@ip-172-31-39-83:~/kafka_2.11-2.3.0
+
+bin/kafka-console-producer.sh --broker-list host1:9092,host2:9092 --topic greetings
+
+run on new terminal and run on second ssh on directory ubuntu@ip-172-31-39-83:~/kafka_2.11-2.3.0
+
+bin/kafka-console-consumer.sh --bootstrap-server host1:9092,host-2.amazonaws.com:9092 --topic greetings --from-beginning
+```
