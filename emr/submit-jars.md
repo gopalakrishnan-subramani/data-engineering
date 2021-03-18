@@ -1,0 +1,25 @@
+
+login to emr 
+
+```
+mkdir jars
+
+cd jars
+
+wget https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.19/postgresql-42.2.19.jar
+
+wget https://repository.mulesoft.org/nexus/content/repositories/public/com/amazon/redshift/redshift-jdbc42/1.2.15.1025/redshift-jdbc42-1.2.15.1025.jar
+
+```
+
+we have downloaded two jars into /home/hadoop/jars location.
+
+```
+cd ~ 
+```
+
+now edit the spark default config file to mention the location..
+
+sudo nano  /etc/spark/conf/spark-defaults.conf
+
+
