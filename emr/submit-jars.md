@@ -20,6 +20,39 @@ cd ~
 
 now edit the spark default config file to mention the location..
 
+```
 sudo nano  /etc/spark/conf/spark-defaults.conf
+```
+
+need to edit below properties carefully...
+
+```
+spark.driver.extraClassPath
+spark.driver.extraLibraryPath
+spark.executor.extraClassPath
+```
+
+here original content/sample, 
+
+```
+......
+spark.driver.extraClassPath      /usr/lib/hadoop-lzo/lib/*:/usr/lib/hadoop/hadoop-aws.jar.............
+....
+spark.executor.extraClassPath    /usr/lib/hadoop-lzo/lib/*:/usr/lib/hadoop/hadoop-aws.jar:/us$......
+```
+
+```
+in this we need to prefix /home/hadoop/jars/* into
+
+spark.driver.extraClassPath, spark.executor.extraClassPath , at end it would look like
+```
+
+````
+spark.driver.extraClassPath /home/hadoop/jars/*:/usr/lib/hadoop-lzo/lib/*............................
+spark.executor.extraClassPath /home/hadoop/jars/*:/usr/lib/hadoop-lzo/lib/*:/usr/lib/hadoop/hadoop-aws.jar............
+```
+
+
+spark-submit.py rds.py
 
 
