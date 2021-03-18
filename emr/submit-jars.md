@@ -28,7 +28,6 @@ need to edit below properties carefully...
 
 ```
 spark.driver.extraClassPath
-spark.driver.extraLibraryPath
 spark.executor.extraClassPath
 ```
 
