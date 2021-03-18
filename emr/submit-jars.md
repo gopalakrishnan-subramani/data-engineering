@@ -2,6 +2,13 @@
 login to emr 
 
 ```
+# do this on home directory
+
+wget https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.19/postgresql-42.2.19.jar
+
+wget https://repository.mulesoft.org/nexus/content/repositories/public/com/amazon/redshift/redshift-jdbc42/1.2.15.1025/redshift-jdbc42-1.2.15.1025.jar
+
+
 mkdir jars
 
 cd jars
