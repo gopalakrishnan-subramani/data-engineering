@@ -47,6 +47,9 @@ Joe
 
 ```
 
+ sudo hbase shell
+
+
  create 'persons','info','salary'
 
  alter 'persons', NAME => 'address'
