@@ -67,6 +67,12 @@ Joe
  put 'persons','2','salary:base', '4000'
  put 'persons','2','salary:bonus', '2000'
 
+ 
+scan 'persons' 
+get 'persons', '1'
+ 
+ get 'persons', '1', {COLUMN => ['info:age', 'salary:bonus']}
+ 
 
  scan 'persons'
 
